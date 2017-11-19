@@ -1,0 +1,873 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.Questionery" xmlns:m="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <m:Page showHeader="true" title="Worklist Application" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress1">
+        <m:content>
+            <m:IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <m:items>
+                    <m:IconTabFilter icon="sap-icon://personnel-view" iconColor="Default" text="Personal Data" count="3" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:Panel height="auto" width="100%" headerText="Personal Data" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <m:MessageStrip text="Your personal data is securely saved and is not share with any third-party." type="Information" customIcon="sap-icon://hint" showIcon="true" showCloseButton="true" visible="true">
+                                        <m:link/>
+                                    </m:MessageStrip>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="First name" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input value="Ahmad" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Last name" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input value="Hamid" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Gender" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox value="Man" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                                <m:items>
+                                                                    <core:Item text="Woman" enabled="true"/>
+                                                                    <core:Item text="Man" enabled="true"/>
+                                                                    <core:Item text="Bisexual" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Marital Status" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox value="Married" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                                <m:items>
+                                                                    <core:Item text="Single" enabled="true"/>
+                                                                    <core:Item text="Married" enabled="true"/>
+                                                                    <core:Item text="Divorced" enabled="true"/>
+                                                                    <core:Item text="Widowed" enabled="true"/>
+                                                                    <core:Item text="None" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Nationality" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox value="Syrian" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/NationalitiesSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{Name}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Birthday" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker value="Nov 18, 1982" enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                </m:content>
+                            </m:Panel>
+                            <m:Panel height="auto" width="100%" headerText="Connection Data" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <m:MessageStrip text="How can we access you?" type="Information" customIcon="sap-icon://hint" showIcon="true" showCloseButton="true" visible="true">
+                                        <m:link/>
+                                    </m:MessageStrip>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Email" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input value="ahmad.hamid@gmail.com" type="Email" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Telephone" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input type="Tel" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Address Line 1" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Address Line 2" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="City" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input value="Damascus" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Country" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox value="Syria" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/NationalitiesSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{ID}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                </m:content>
+                            </m:Panel>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabFilter icon="sap-icon://education" iconColor="Default" text="Educations" count="10" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:MessageStrip text="Your educational data may be shared with some third-party companies." type="Warning" customIcon="sap-icon://hint" showIcon="true" showCloseButton="true" visible="true">
+                                <m:link/>
+                            </m:MessageStrip>
+                            <m:Panel height="auto" width="100%" headerText="Latest University Degrees" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Institute" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="University of Bonn" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Title of the Degree" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox placeholder="Master" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                                <m:items>
+                                                                    <core:Item text="Ph.D" enabled="true"/>
+                                                                    <core:Item text="Master" enabled="true"/>
+                                                                    <core:Item text="Bachelor" enabled="true"/>
+                                                                    <core:Item text="High School" enabled="true"/>
+                                                                    <core:Item text="Elementary School" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Degree" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Master of Computer Science" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Country of Issued" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox placeholder="Germany" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/NationalitiesSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{ID}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Date of Issued" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="I have access to my original certification" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                </m:content>
+                            </m:Panel>
+                            <m:Panel height="auto" width="100%" headerText="Another University Degrees" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Institute" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="University of Damascus" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Title of the Degree" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox placeholder="Bachelor" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                                <m:items>
+                                                                    <core:Item text="Ph.D" enabled="true"/>
+                                                                    <core:Item text="Master" enabled="true"/>
+                                                                    <core:Item text="Bachelor" enabled="true"/>
+                                                                    <core:Item text="High School" enabled="true"/>
+                                                                    <core:Item text="Elementary School" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Degree" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Bachelor of Electrical Engineering" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Country of Issued" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox placeholder="Syria" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/NationalitiesSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{ID}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Date of Issued" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="I have access to my original certification" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                </m:content>
+                            </m:Panel>
+                            <m:Panel height="auto" width="100%" headerText="Latest School Degree" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Institute" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Schoole Omid" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Degree" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Math Diploma" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Country of Issued" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox placeholder="Syria" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/NationalitiesSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{ID}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Date of Issued" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="I have access to my original certification" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                </m:content>
+                            </m:Panel>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabFilter icon="sap-icon://key" iconColor="Default" text="Skills" count="19" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:MessageStrip text="Your skills data may be shared with some third-party companies." type="Warning" customIcon="sap-icon://hint" showIcon="true" showCloseButton="true" visible="true">
+                                <m:link/>
+                            </m:MessageStrip>
+                            <m:Panel height="auto" width="100%" headerText="Technical IT Skill #1" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Skill" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Java, Java Script, CSS, Linux" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="My Knowledge level" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="I have a certificate for this skill" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Title of the Certificate" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Codility Gold Certificate" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Date of Issued" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="URL of Proofment" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="https://www.trivago.de/" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                    <m:Link text="Add another Skill" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false" press="_onLinkPress1"/>
+                                </m:content>
+                            </m:Panel>
+                            <m:Panel height="auto" width="100%" headerText="IT Projects I did #1" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Skill" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Java, Java Script, CSS" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="I have access to its source code" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Explain about it" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Date of Doing" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="URL to Repository" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="https://www.trivago.de/" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                    <m:Link text="Add another Project" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false" press="_onLinkPress2"/>
+                                </m:content>
+                            </m:Panel>
+                            <m:Panel height="auto" width="100%" headerText="Language Skill #1" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Language" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Java, Java Script, CSS" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Level of Knowledge" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="I have a certificate" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the certificate" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Valid until" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="URL to certificate" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="https://www.trivago.de/" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                    <m:Link text="Add another Language Skill" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false" press="_onLinkPress3"/>
+                                </m:content>
+                            </m:Panel>
+                            <m:Panel height="auto" width="100%" headerText="Work Experiences #1" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Name of the Company" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Trivago" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Job Position" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Back-End Developer of Java" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Date of starting" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Date of lefting" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:DatePicker enabled="true" visible="true" width="auto" displayFormat="MMM dd, yyyy"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Web page" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="https://www.trivago.de/" type="Url" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Address" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="Bennigsen-Platz 1, 40474 Düsseldorf" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Country" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox placeholder="Germany" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/NationalitiesSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{ID}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Tellephone" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="+49-1515-1028500" type="Tel" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                    <m:Link text="Add another Work Experence" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false" press="_onLinkPress4"/>
+                                </m:content>
+                            </m:Panel>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabFilter icon="sap-icon://hint" iconColor="Default" text="Interests" count="3" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:MessageStrip text="Your interest data will not be shared with some third-party companies." type="Information" customIcon="sap-icon://hint" showIcon="true" showCloseButton="true" visible="true">
+                                <m:link/>
+                            </m:MessageStrip>
+                            <m:Panel height="auto" width="100%" headerText="Interest in the IT Area #1" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="I like to become" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Input placeholder="A Web Developer" type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="0"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Priority" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="because I think" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:TextArea rows="10" placeholder="Why this is your aim?" cols="20" maxLength="0" wrapping="None" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                    <m:Link text="Add another Interest" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false" press="_onLinkPress5"/>
+                                </m:content>
+                            </m:Panel>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabFilter icon="sap-icon://role" iconColor="Default" text="Discovery" count="0" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:MessageStrip text="Your extra data will not be shared with some third-party companies." type="Information" customIcon="sap-icon://hint" showIcon="true" showCloseButton="true" visible="true">
+                                <m:link/>
+                            </m:MessageStrip>
+                            <m:Panel height="auto" width="100%" headerText="Discover other aspects of your personality." expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                                <m:content>
+                                    <m:MessageStrip text="Please answer the questions very honestly." type="Error" customIcon="sap-icon://hint" showIcon="true" showCloseButton="true" visible="true">
+                                        <m:link/>
+                                    </m:MessageStrip>
+                                    <form:Form width="100%" editable="true" visible="true">
+                                        <form:title/>
+                                        <form:formContainers>
+                                            <form:FormContainer visible="true">
+                                                <form:formElements>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="How do you like teamwork?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="4" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="How often do you schedule your work?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="2" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="How do you respect other cultures?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="3" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="How do you respect other religions?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="2" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="How do you like International workplaces?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:RatingIndicator value="5" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Would you like to start a self-employed job?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Do you know anything about start ups?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Do you have access to high speed Internet?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="true" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Do you like to work remotely?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="Do you have access to computer?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="How many hours can you spend for occupation?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox value="7" placeholder="0" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/HoursSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{ID}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                    <form:FormElement visible="true">
+                                                        <form:label>
+                                                            <m:Label text="How many days can you spend for occupation?" design="Bold" width="100%" required="true" textAlign="Begin" textDirection="Inherit"/>
+                                                        </form:label>
+                                                        <form:fields>
+                                                            <m:ComboBox value="6" placeholder="0" editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%" items="{/DaysSet}">
+                                                                <m:items>
+                                                                    <core:Item text="{ID}" enabled="true"/>
+                                                                </m:items>
+                                                            </m:ComboBox>
+                                                        </form:fields>
+                                                    </form:FormElement>
+                                                </form:formElements>
+                                                <form:title/>
+                                            </form:FormContainer>
+                                        </form:formContainers>
+                                        <form:layout>
+                                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                                        </form:layout>
+                                    </form:Form>
+                                </m:content>
+                            </m:Panel>
+                        </m:content>
+                    </m:IconTabFilter>
+                </m:items>
+                <m:content/>
+            </m:IconTabBar>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight>
+                    <m:Button text="Submit" type="Accept" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <m:Button text="Cancel" type="Reject" icon="sap-icon://cancel" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                </m:contentRight>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress3"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

@@ -1,0 +1,31 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.Launch" xmlns:m="sap.m" xmlns:layout="sap.ui.layout">
+    <m:Page showHeader="true" title="Help.me" showFooter="true" showNavButton="false">
+        <m:content>
+            <layout:Grid defaultIndent="L0 M0 S0" defaultSpan="L3 M4 S12" position="Center" width="100%" containerQuery="false" hSpacing="1" vSpacing="1">
+                <layout:content>
+                    <m:StandardTile title="Consulting" number="36%" numberUnit="Done" info="Guide Me" infoState="Success" icon="sap-icon://learning-assistant" press="_onStandardTilePress"/>
+                    <m:StandardTile title="Recommendations" number="4" numberUnit="Suggestions" info="My tasks" infoState="Success" icon="sap-icon://task" press="_onStandardTilePress1"/>
+                    <m:StandardTile title="Technical Learning" number="110" numberUnit="Topics" info="Learn IT Skills" infoState="Success" icon="sap-icon://e-learning"/>
+                    <m:StandardTile title="Social Learning" number="12" numberUnit="Topics" info="How to live?" infoState="Success" icon="sap-icon://comment"/>
+                    <m:StandardTile title="Job Positions" number="1256" numberUnit="Positions" info="Search &amp; Apply" infoState="Success" icon="sap-icon://search" press="_onStandardTilePress2"/>
+                    <m:StandardTile title="Qualification" number="2" numberUnit="Done" info="Test yourself" infoState="Success" icon="sap-icon://competitor" press="_onStandardTilePress3"/>
+                    <m:StandardTile title="Banking" number="3" numberUnit="TOPICS" info="Money Issues" infoState="Success" icon="sap-icon://money-bills"/>
+                    <m:StandardTile title="Job Portal" number="345" numberUnit="Companies" info="Post a job here" infoState="Error" icon="sap-icon://post"/>
+                    <m:StandardTile title="Donation" number="4" numberUnit="Ways" info="Donate us" infoState="Success" icon="sap-icon://mileage"/>
+                </layout:content>
+            </layout:Grid>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight/>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress1"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

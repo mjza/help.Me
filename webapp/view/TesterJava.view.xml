@@ -1,0 +1,92 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.TesterJava" xmlns:m="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+    <m:Page showHeader="true" title="Test Platform" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+        <m:content>
+            <m:Bar design="SubHeader">
+                <m:contentLeft>
+                    <m:Title text="Level: Junior" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentLeft>
+                <m:contentMiddle>
+                    <core:Icon src="sap-icon://source-code" size="48px" height="48px" width="48px" visible="true"/>
+                    <m:Title text="Java" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentMiddle>
+                <m:contentRight>
+                    <m:Title text="Time: 102 Min" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentRight>
+            </m:Bar>
+            <m:Panel height="auto" width="100%" headerText="Panel with a header text" expandable="true" expanded="true" expandAnimation="true" backgroundDesign="Solid">
+                <m:content>
+                    <m:Text text="Dear applicants, you have 5 minutes to finish this part of the test. Don't forget to submit after answering to all questions." width="auto" maxLines="6" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                    <form:Form width="100%" editable="true" visible="true">
+                        <form:title>
+                            <core:Title text="Part #1" level="Auto"/>
+                        </form:title>
+                        <form:formContainers>
+                            <form:FormContainer visible="true">
+                                <form:formElements>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <m:Label text="Does Java have pointers?" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <m:Label text="Does Java support multiple inheritances?" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <m:Switch state="false" customTextOff="Off" customTextOn="On" type="Default" enabled="true" visible="true"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <m:Label text="What is the type of the integer variable in Java?" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <m:ComboBox editable="true" enabled="true" visible="true" width="auto" valueState="None" maxWidth="100%">
+                                                <m:items>
+                                                    <core:Item text="String" enabled="true"/>
+                                                    <core:Item text="float" enabled="true"/>
+                                                    <core:Item text="int" enabled="true"/>
+                                                    <core:Item text="none of them" enabled="true"/>
+                                                </m:items>
+                                            </m:ComboBox>
+                                        </form:fields>
+                                    </form:FormElement>
+                                    <form:FormElement visible="true">
+                                        <form:label>
+                                            <m:Label text="Write a Fibonacci function." design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </form:label>
+                                        <form:fields>
+                                            <m:TextArea value="fibo(a,b){ }" rows="10" cols="20" maxLength="0" wrapping="None" visible="true"/>
+                                        </form:fields>
+                                    </form:FormElement>
+                                </form:formElements>
+                                <form:title/>
+                            </form:FormContainer>
+                        </form:formContainers>
+                        <form:layout>
+                            <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="6" labelSpanS="12"/>
+                        </form:layout>
+                    </form:Form>
+                </m:content>
+            </m:Panel>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight>
+                    <m:Button text="Submit" type="Accept" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <m:Button text="Cancel" type="Reject" icon="sap-icon://cancel" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </m:contentRight>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

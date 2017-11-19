@@ -1,0 +1,267 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.Recomendation" xmlns:m="sap.m">
+    <m:Page showHeader="true" title="Our Recommendations" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress1">
+        <m:content>
+            <m:IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <m:items>
+                    <m:IconTabFilter icon="sap-icon://paper-plane" iconColor="Default" text="Positions" count="23" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" items="{/JobsSet}">
+                                <m:infoToolbar/>
+                                <m:headerToolbar>
+                                    <m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                                        <m:content>
+                                            <m:Text text="Possible Job Positions (" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="23" width="17px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text=")" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:ToolbarSpacer width=""/>
+                                            <m:SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </m:content>
+                                        <m:tooltip/>
+                                    </m:Toolbar>
+                                </m:headerToolbar>
+                                <m:columns>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="ID" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Position" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Company" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Document Type" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Remotly" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Language" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Posting Date" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Salary Range" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem type="Navigation">
+                                        <m:cells>
+                                            <m:Link text="{ID}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <m:Text text="{position_name}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{company_name}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{contract_fulltime}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Label text="{work_remotely}" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Label text="{lang_skill}" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{tech_skills}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:ObjectNumber number="{path: 'salary', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="{currency}" emphasized="true" state="None"/>
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabFilter icon="sap-icon://commission-check" iconColor="Default" text="Tests" count="3" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" items="{/Rec_TestSet}">
+                                <m:infoToolbar/>
+                                <m:headerToolbar>
+                                    <m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                                        <m:content>
+                                            <m:Text text="Recommended Tests (" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="3" width="10px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text=")" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:ToolbarSpacer width=""/>
+                                            <m:SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </m:content>
+                                        <m:tooltip/>
+                                    </m:Toolbar>
+                                </m:headerToolbar>
+                                <m:columns>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Skill" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Position" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Related Jobs" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Document Type" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Demand" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Posting Date" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Salary Range" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem type="Navigation">
+                                        <m:cells>
+                                            <m:Link text="{Skill}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <m:Text text="{Position}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{path: 'RelatedJobs', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{path: 'Salary', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:RatingIndicator value="{path: 'Demand', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                            <m:Text text="{Currency}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:ObjectNumber number="{path: 'Salary', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="{Currency}" emphasized="true" state="Success"/>
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </m:content>
+                    </m:IconTabFilter>
+                    <m:IconTabFilter icon="sap-icon://positive" iconColor="Default" text="Learn" count="5" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <m:content>
+                            <m:Table width="100%" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" items="{/Rec_SkillsSet}">
+                                <m:infoToolbar/>
+                                <m:headerToolbar>
+                                    <m:Toolbar width="auto" height="46px" design="Transparent" visible="true" enabled="true">
+                                        <m:content>
+                                            <m:Text text="Recommended Skills (" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="5" width="10px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text=")" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:ToolbarSpacer width=""/>
+                                            <m:SearchField placeholder="Search" showSearchButton="true" visible="true" width="auto"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://sort" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://group-2" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                            <m:Button text="" type="Transparent" icon="sap-icon://action-settings" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                        </m:content>
+                                        <m:tooltip/>
+                                    </m:Toolbar>
+                                </m:headerToolbar>
+                                <m:columns>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Skill" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Position" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Related Jobs" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Document Type" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Demand" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Posting Date" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                    <m:Column width="auto" hAlign="Right" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <m:header>
+                                            <m:Text text="Salary Range" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
+                                        </m:header>
+                                        <m:footer/>
+                                    </m:Column>
+                                </m:columns>
+                                <m:items>
+                                    <m:ColumnListItem type="Navigation">
+                                        <m:cells>
+                                            <m:Link text="{Skill}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <m:Text text="{Position}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{path: 'RelatedJobs', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{path: 'RelatedJobs', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:RatingIndicator value="{path: 'Demand', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" maxValue="5" visualMode="Half" enabled="true" visible="true"/>
+                                            <m:Text text="{Currency}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:ObjectNumber number="{path: 'Salary', type: 'sap.ui.model.type.Float', formatOptions: { maxFractionDigits: 2 }}" unit="{Currency}" emphasized="true" state="None"/>
+                                        </m:cells>
+                                    </m:ColumnListItem>
+                                </m:items>
+                            </m:Table>
+                        </m:content>
+                    </m:IconTabFilter>
+                </m:items>
+                <m:content/>
+            </m:IconTabBar>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight/>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress4"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

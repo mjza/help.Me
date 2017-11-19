@@ -1,0 +1,118 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.Mentoring" xmlns:m="sap.m" xmlns:layout="sap.ui.layout" xmlns:chart="sap.chart" xmlns:data="sap.chart.data">
+    <m:Page showHeader="true" title="Mentor Program" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress1">
+        <m:content>
+            <layout:Grid defaultIndent="L0 M0 S0" defaultSpan="L4 M6 S12" position="Left" width="100%" containerQuery="false" hSpacing="1" vSpacing="1">
+                <layout:content>
+                    <m:SlideTile displayTime="5000" transitionTime="5000">
+                        <m:tiles>
+                            <m:GenericTile header="Are you a refuge?" subheader="Looking for a job?" frameType="TwoByOne" class="sapUiTinyMarginTop">
+                                <m:tileContent>
+                                    <m:TileContent footer="" unit="">
+                                        <m:content>
+                                            <m:NewsContent contentText="We are here to help you towards the best way for occupy a job position." subheader="Sign up for free."/>
+                                        </m:content>
+                                    </m:TileContent>
+                                </m:tileContent>
+                            </m:GenericTile>
+                            <m:GenericTile header="Do you know what is best for you?" subheader="What are the best way to get qualified?" frameType="TwoByOne" class="sapUiTinyMarginTop">
+                                <m:tileContent>
+                                    <m:TileContent footer="" unit="">
+                                        <m:content>
+                                            <m:NewsContent contentText="We guide you towards the best and fastest job position for you." subheader="Speak, Learn, Qualified and Employed"/>
+                                        </m:content>
+                                    </m:TileContent>
+                                </m:tileContent>
+                            </m:GenericTile>
+                        </m:tiles>
+                    </m:SlideTile>
+                    <chart:Chart id="sap_Worklist_Page_0-content-sap_ui_layout_Grid-1511016879838-content-sap_chart_BarChart-2" width="100%" height="175px" visibleDimensions="dim0" visibleMeasures="mea0" chartType="bar" isAnalytical="false" selectionMode="Single" uiConfig="{}" vizProperties="{plotArea:{dataLabel:{visible: true,hideWhenOverlap:true}}}">
+                        <chart:dimensions>
+                            <data:Dimension name="dim0" label="Country" role="category"/>
+                        </chart:dimensions>
+                        <chart:measures>
+                            <data:Measure name="mea0" label="Profit" role="axis2"/>
+                        </chart:measures>
+                    </chart:Chart>
+                    <m:SlideTile displayTime="5000" transitionTime="5500">
+                        <m:tiles>
+                            <m:GenericTile header="What we offer you?" subheader="What can I get here?" frameType="TwoByOne" class="sapUiTinyMarginTop">
+                                <m:tileContent>
+                                    <m:TileContent footer="" unit="">
+                                        <m:content>
+                                            <m:NewsContent contentText="We offer learning, qualification and job search." subheader="We cover your way from start to end."/>
+                                        </m:content>
+                                    </m:TileContent>
+                                </m:tileContent>
+                            </m:GenericTile>
+                            <m:GenericTile header="What categories are we covered?" subheader="I don't have any background in IT." frameType="TwoByOne" class="sapUiTinyMarginTop">
+                                <m:tileContent>
+                                    <m:TileContent footer="" unit="">
+                                        <m:content>
+                                            <m:NewsContent contentText="Even if you are in any level of IT knowledge we can offer you a learning path and help you to find something suitable." subheader="All level of knowledge are welcome."/>
+                                        </m:content>
+                                    </m:TileContent>
+                                </m:tileContent>
+                            </m:GenericTile>
+                        </m:tiles>
+                    </m:SlideTile>
+                    <chart:Chart id="sap_Worklist_Page_0-content-sap_ui_layout_Grid-1511016879838-content-sap_chart_BubbleChart-4" width="100%" height="186.41250610351562px" visibleDimensions="dim0,dim1" visibleMeasures="mea0,mea1,mea2" chartType="bubble" isAnalytical="false" selectionMode="Single" uiConfig="{}" vizProperties="{plotArea:{dataLabel:{visible: true,hideWhenOverlap:true}}}">
+                        <chart:dimensions>
+                            <data:Dimension name="dim0" label="Store Name" role="category"/>
+                            <data:Dimension name="dim1" label="Fat Percentage" role="category"/>
+                        </chart:dimensions>
+                        <chart:measures>
+                            <data:Measure name="mea0" label="Revenue" role="axis2"/>
+                            <data:Measure name="mea1" label="Cost" role="axis2"/>
+                            <data:Measure name="mea2" label="Consumption" role="axis2"/>
+                        </chart:measures>
+                    </chart:Chart>
+                    <m:SlideTile displayTime="5000" transitionTime="6000">
+                        <m:tiles>
+                            <m:GenericTile header="What is the demand for IT jobs?" subheader="In which IT jobs I have more chances?" frameType="TwoByOne" class="sapUiTinyMarginTop">
+                                <m:tileContent>
+                                    <m:TileContent footer="" unit="">
+                                        <m:content>
+                                            <m:NewsContent contentText="Do you know which field of IT area is best to enter to earn more and employ faster?" subheader="We know what is needed now."/>
+                                        </m:content>
+                                    </m:TileContent>
+                                </m:tileContent>
+                            </m:GenericTile>
+                            <m:GenericTile header="Does it matter how old I am?" subheader="I am almost middle age, can I learn IT?" frameType="TwoByOne" class="sapUiTinyMarginTop">
+                                <m:tileContent>
+                                    <m:TileContent footer="" unit="">
+                                        <m:content>
+                                            <m:NewsContent contentText="It doesn't matter how old you are. There are some IT jobs that are really easy to learn, like testing." subheader=""/>
+                                        </m:content>
+                                    </m:TileContent>
+                                </m:tileContent>
+                            </m:GenericTile>
+                        </m:tiles>
+                    </m:SlideTile>
+                    <layout:Grid defaultIndent="L0 M0 S0" defaultSpan="L6 M6 S6" position="Left" width="100%" containerQuery="false" hSpacing="1" vSpacing="1">
+                        <layout:content>
+                            <m:Link text="Complete your journey" textAlign="End" width="100%" target="_self" wrapping="false" enabled="true" visible="true" emphasized="true" subtle="false" press="_onLinkPress"/>
+                            <m:TileContent footer="People started." unit="">
+                                <m:content>
+                                    <m:NumericContent value="243562" valueColor="Good" indicator="None" icon="sap-icon://journey-depart"/>
+                                </m:content>
+                            </m:TileContent>
+                        </layout:content>
+                    </layout:Grid>
+                </layout:content>
+            </layout:Grid>
+            <m:ProgressIndicator width="100%" percentValue="36" showValue="true" displayValue="36% of process completed." state="Success" enabled="true" visible="true"/>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight/>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress2"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

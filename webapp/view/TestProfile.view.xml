@@ -1,0 +1,52 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.TestProfile" xmlns:m="sap.m" xmlns:core="sap.ui.core">
+    <m:Page showHeader="true" title="Test Platform" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress2">
+        <m:content>
+            <m:Bar design="SubHeader">
+                <m:contentLeft>
+                    <m:Title text="Level: Junior" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentLeft>
+                <m:contentMiddle>
+                    <core:Icon src="sap-icon://source-code" size="48px" height="48px" width="48px" visible="true"/>
+                    <m:Title text="CSS3" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentMiddle>
+                <m:contentRight>
+                    <m:Title text="Passed" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentRight>
+            </m:Bar>
+            <m:HBox alignItems="Center" direction="Row" fitContainer="true" width="100%" height="auto" justifyContent="Center" renderType="Div" visible="true" displayInline="false">
+                <m:items>
+                    <m:VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <m:items>
+                            <m:Title text="" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="Help.Me confirms that a person who identified to us on-line as:" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="Ahmad Hassan" titleStyle="H1" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="was awarded" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="Help.Me Golden Award for the CSS3 2017 Challenge" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="This is the 62nd Help.Me Golden Award granted this month." titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="AWARD TYPE:  .......................Help.Me Golden Award (CSS3 2017)" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Title text="ASSESSMENT: ...........................correct functionality and scalability" titleStyle="H3" width="auto" textAlign="Center" visible="true"/>
+                            <m:Image src="/webapp/resources/prize.png" height="258px" width="258px" densityAware="false"/>
+                        </m:items>
+                        <m:layoutData/>
+                    </m:VBox>
+                </m:items>
+                <m:layoutData/>
+            </m:HBox>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight/>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress9"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

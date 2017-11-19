@@ -1,0 +1,133 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="6ba1ecbebf876fe30ed2e261" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="6ba1ecbebf876fe30ed2e261_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="NationalitiesSet" EntityType="6ba1ecbebf876fe30ed2e261.Nationalities" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="HoursSet" EntityType="6ba1ecbebf876fe30ed2e261.Hours" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="DaysSet" EntityType="6ba1ecbebf876fe30ed2e261.Days" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="JobsSet" EntityType="6ba1ecbebf876fe30ed2e261.Jobs" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="Rec_TestSet" EntityType="6ba1ecbebf876fe30ed2e261.Rec_Test" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="Rec_SkillsSet" EntityType="6ba1ecbebf876fe30ed2e261.Rec_Skills" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="Passed_TestSet" EntityType="6ba1ecbebf876fe30ed2e261.Passed_Test" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="Ongoing_TestSet" EntityType="6ba1ecbebf876fe30ed2e261.Ongoing_Test" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="Ready_TestSet" EntityType="6ba1ecbebf876fe30ed2e261.Ready_Test" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="Nationalities">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+            </EntityType>
+            <EntityType Name="Hours">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="Days">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="Jobs">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="position_name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="position_name"/>
+                <Property Name="company_name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="company_name"/>
+                <Property Name="contract_fulltime" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="contract_fulltime"/>
+                <Property Name="contract_years" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="contract_years"/>
+                <Property Name="tech_skills" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="tech_skills"/>
+                <Property Name="lang_skill" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="lang_skill"/>
+                <Property Name="salary" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="salary"/>
+                <Property Name="currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="currency"/>
+                <Property Name="benefit" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="benefit"/>
+                <Property Name="place" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="place"/>
+                <Property Name="post_date" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="post_date"/>
+                <Property Name="work_remotely" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="work_remotely"/>
+                <Property Name="job_description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="job_description"/>
+            </EntityType>
+            <EntityType Name="Rec_Test">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Skill" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="Position" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Price"/>
+                <Property Name="Salary" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Sallery"/>
+                <Property Name="Currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Currency"/>
+                <Property Name="Level" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Level"/>
+                <Property Name="RelatedJobs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RelatedPositions"/>
+                <Property Name="Demand" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Demand"/>
+                <Property Name="Participants" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Level2"/>
+                <Property Name="Holders" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Holders"/>
+                <Property Name="RemoteJobs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RemoteJobs"/>
+            </EntityType>
+            <EntityType Name="Rec_Skills">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Skill" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Skill"/>
+                <Property Name="Position" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Position"/>
+                <Property Name="RelatedJobs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RelatedJobs"/>
+                <Property Name="Salary" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Salary"/>
+                <Property Name="Currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Currency"/>
+                <Property Name="Demand" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Demand"/>
+            </EntityType>
+            <EntityType Name="Passed_Test">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Skill" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Skill"/>
+                <Property Name="Position" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Position"/>
+                <Property Name="Salary" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Level"/>
+                <Property Name="Currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+                <Property Name="Level" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Level"/>
+                <Property Name="RelatedJob" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RelatedJob"/>
+                <Property Name="Demand" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Demand"/>
+                <Property Name="Participants" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Participants"/>
+                <Property Name="Holders" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Holders"/>
+                <Property Name="RemoteJob" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RemoteJob"/>
+                <Property Name="DateOfIssue" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="DateOfIssue"/>
+            </EntityType>
+            <EntityType Name="Ongoing_Test">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Skill" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Skill"/>
+                <Property Name="Level" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Level"/>
+                <Property Name="Participants" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Participants"/>
+                <Property Name="Holders" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Holders"/>
+                <Property Name="Position" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Position"/>
+                <Property Name="Salary" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Salary"/>
+                <Property Name="Currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Currency"/>
+                <Property Name="RelatedJob" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RelatedJob"/>
+                <Property Name="Demand" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+                <Property Name="RemoteJobs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RemoteJobs"/>
+                <Property Name="Progress" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Progress"/>
+            </EntityType>
+            <EntityType Name="Ready_Test">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Skill" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Skill"/>
+                <Property Name="Level" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Level"/>
+                <Property Name="Position" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Position"/>
+                <Property Name="Salary" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Salary"/>
+                <Property Name="Currency" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Currency"/>
+                <Property Name="RelatedJobs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RelatedJobs"/>
+                <Property Name="RemoteJobs" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="RemoteJobs"/>
+                <Property Name="Participans" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="DefaultName"/>
+                <Property Name="Demand" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Demand"/>
+                <Property Name="Holders" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Holders"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

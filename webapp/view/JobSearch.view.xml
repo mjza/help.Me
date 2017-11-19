@@ -1,0 +1,48 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.JobSearch" xmlns:m="sap.m">
+    <m:Page showHeader="true" title="Job Search Portal" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress1">
+        <m:content>
+            <m:List mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" itemPress="_onListItemPress" items="{/JobsSet}">
+                <m:infoToolbar>
+                    <m:Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                        <m:content>
+                            <m:Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                        </m:content>
+                    </m:Toolbar>
+                </m:infoToolbar>
+                <m:headerToolbar>
+                    <m:Toolbar visible="true" enabled="true" width="" design="Solid">
+                        <m:content>
+                            <m:SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%"/>
+                        </m:content>
+                    </m:Toolbar>
+                </m:headerToolbar>
+                <m:items>
+                    <m:ObjectListItem intro="" title="{position_name}" number="{place}" numberUnit="" numberState="None" type="Active" selected="true" showMarkers="false">
+                        <m:attributes>
+                            <m:ObjectAttribute text="{company_name}" active="false"/>
+                            <m:ObjectAttribute text="{contract_fulltime}" active="false"/>
+                            <m:ObjectAttribute title="Remote working" text="{work_remotely}" active="false"/>
+                            <m:ObjectAttribute title="Language" text="{lang_skill}" active="false"/>
+                        </m:attributes>
+                        <m:firstStatus/>
+                        <m:secondStatus>
+                            <m:ObjectStatus title="Post date" text="{path: 'post_date', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" state="None"/>
+                        </m:secondStatus>
+                    </m:ObjectListItem>
+                </m:items>
+            </m:List>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight/>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress5"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>

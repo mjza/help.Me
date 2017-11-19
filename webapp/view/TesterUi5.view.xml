@@ -1,0 +1,49 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.helpMe.controller.TesterUi5" xmlns:m="sap.m" xmlns:core="sap.ui.core">
+    <m:Page showHeader="true" title="Test Platform" showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress1">
+        <m:content>
+            <m:Bar design="SubHeader">
+                <m:contentLeft>
+                    <m:Title text="Level: Junior" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentLeft>
+                <m:contentMiddle>
+                    <core:Icon src="sap-icon://source-code" size="48px" height="48px" width="48px" visible="true"/>
+                    <m:Title text="SAPUI5" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                </m:contentMiddle>
+                <m:contentRight>
+                    <m:Title text="Ongoing" titleStyle="H1" width="auto" textAlign="Begin" visible="true"/>
+                    <core:Icon src="sap-icon://locked" size="48px" height="48px" width="48px" visible="true"/>
+                </m:contentRight>
+            </m:Bar>
+            <m:HBox alignItems="Stretch" direction="Row" fitContainer="true" width="768px" height="467.5249938964844px" justifyContent="Center" renderType="Div" visible="true" displayInline="false">
+                <m:items>
+                    <m:VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                        <m:items>
+                            <m:Title text="" titleStyle="Auto" width="auto" textAlign="Begin" visible="true"/>
+                            <m:Title text="" titleStyle="Auto" width="auto" textAlign="Begin" visible="true"/>
+                            <m:MessageStrip text="You are not allowed to start this test yet. Please finish your learning phase first." type="Error" customIcon="sap-icon://lateness" showIcon="true" showCloseButton="false" visible="true">
+                                <m:link/>
+                            </m:MessageStrip>
+                        </m:items>
+                        <m:layoutData/>
+                    </m:VBox>
+                </m:items>
+                <m:layoutData/>
+            </m:HBox>
+        </m:content>
+        <m:footer>
+            <m:Bar design="Auto">
+                <m:contentLeft/>
+                <m:contentMiddle/>
+                <m:contentRight>
+                    <m:Button text="Submit" type="Accept" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <m:Button text="Cancel" type="Reject" icon="sap-icon://cancel" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </m:contentRight>
+            </m:Bar>
+        </m:footer>
+        <m:headerContent>
+            <m:Image src="/webapp/resources/logo.png" height="auto" width="75px" densityAware="false" press="_onImagePress8"/>
+        </m:headerContent>
+        <m:subHeader/>
+        <m:customHeader/>
+    </m:Page>
+</mvc:View>
